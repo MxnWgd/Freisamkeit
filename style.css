@@ -2,8 +2,8 @@
   Theme Name: Freisamkeit Theme
   Author: Maximilian Wiegand
 	Author URI: http://maxiw.de/
-  Description: A theme designed for the Freisamkeit-magazine of the Bundesverband der Liberalen Hochschulgruppen. Any other use than on the designated webpage requires prior approval by the author.
-  Version: 1.0
+  Description: A theme designed for the Freisamkeit-magazine of the Bundesverband der Liberalen Hochschulgruppen. Any other use than on the designated webpage requires prior approval by the author. For bugs or improvements refer to https://github.com/MxnWgd/Freisamkeit/issues.
+  Version: 1.0.1
 	Requires at least: 5.7
 	Tested up to: 5.7.1
   Text Domain: freisamkeit
@@ -536,11 +536,13 @@ header {
 	top: 0;
 	right: 0;
 	padding: 50px;
-	margin-left: 250px;
+	margin-left: 375px;
+	text-align: right;
 }
 
 .nav-wrapper ul.header-menu {
 	display: inline-block;
+	font-size: 0.8em;
 }
 
 .nav-wrapper li {
@@ -959,6 +961,10 @@ header {
 	width: 80%;
 }
 
+.sidebar {
+	margin-top: 100px;
+}
+
 /*-----------------------------------------------
   The Loop
 -----------------------------------------------*/
@@ -1351,6 +1357,26 @@ header {
 	white-space: pre-line;
 }
 
+.pagination-nav {
+	text-align: center;
+  font-size: 1.7em;
+	line-height: 1.7em;
+}
+
+.pagination-nav > a,
+.pagination-nav > span {
+	display: inline-block;
+	margin: 0 5px;
+}
+
+.pagination-nav > a::after {
+	display: none;
+}
+
+.pagination-nav > span {
+	user-select: none;
+}
+
 
 /*-----------------------------------------------
   Widgets
@@ -1582,8 +1608,16 @@ footer * {
 		max-width: 250px;
 	}
 
+	.header-title {
+		font-size: 3.2em;
+	}
+
+	.header-subtitle {
+		font-size: 1.2em;
+	}
+
 	.nav-wrapper {
-		margin-left: 200px;
+		margin-left: 250px;
 	}
 	.content-wrapper .featured-post .post-title {
 		font-size: 3em;
@@ -1803,7 +1837,8 @@ footer * {
 		margin-bottom: 20px;
 	}
 
-	.category-header {
+	.category-header,
+	.sidebar {
     margin-top: 50px;
 	}
 

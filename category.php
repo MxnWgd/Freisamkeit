@@ -19,6 +19,13 @@
     }
     ?>
   </div>
+
+  <div class="pagination-nav">
+    <?php echo paginate_links(
+      array('type' => 'plain',
+       'next_text' => '<i class="fas fa-angle-right"></i>',
+       'prev_text' => '<i class="fas fa-angle-left"></i>')); ?>
+  </div>
 </div>
 
 <?php get_footer(); ?>
