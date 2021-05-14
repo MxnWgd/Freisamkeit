@@ -3,7 +3,7 @@
   Author: Maximilian Wiegand
 	Author URI: http://maxiw.de/
   Description: A theme designed for the Freisamkeit-magazine of the Bundesverband der Liberalen Hochschulgruppen. Any other use than on the designated webpage requires prior approval by the author. For bugs or improvements refer to https://github.com/MxnWgd/Freisamkeit/issues.
-  Version: 1.0.2
+  Version: 1.0.3
 	Requires at least: 5.7
 	Tested up to: 5.7.1
   Text Domain: freisamkeit
@@ -536,6 +536,7 @@ header {
 	font-size: 1.5em;
 	color: #FFFFFF;
 	top: -10px;
+	left: 5px;
 	position: relative;
 }
 
@@ -1126,7 +1127,7 @@ header {
 
 .post-text,
 .page-content {
-	width: 70%;
+	width: 80%;
 }
 
 .post-tags {
