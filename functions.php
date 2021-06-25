@@ -64,11 +64,9 @@
       $category_string = ""; // keep double quotes!!!
       $category_string_def = "";
 
-      $i = 1;
       foreach($categories_list as $single_cat) {
   	     $category_string .= "- " . $single_cat->name . "<br/>";
-  	     $category_string_def .= $i . ". " . $single_cat->name . "\n";
-         $i++;
+  	     $category_string_def .= $single_cat->name . "\n";
       }
 
       $wp_customize->add_section('front_page_options', array(
