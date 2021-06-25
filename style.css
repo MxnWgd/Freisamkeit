@@ -3,7 +3,7 @@
   Author: Maximilian Wiegand
 	Author URI: http://maxiw.de/
   Description: A theme designed for the Freisamkeit-magazine of the Bundesverband der Liberalen Hochschulgruppen. Any other use than on the designated webpage requires prior approval by the author. For bugs or improvements refer to https://github.com/MxnWgd/Freisamkeit/issues.
-  Version: 1.0.4
+  Version: 1.2
 	Requires at least: 5.7
 	Tested up to: 5.7.2
   Text Domain: freisamkeit
@@ -131,7 +131,8 @@ a:focus::after {
 }
 
 .content-wrapper p {
-	margin: 10px 0;
+	margin: 20px 0;
+	line-height: 1.7em;
 }
 
 .content-wrapper h1 {
@@ -289,6 +290,12 @@ blockquote cite {
 	position: relative;
 }
 
+.wp-block-pullquote blockquote::selection,
+.wp-block-pullquote blockquote p::selection {
+	color: #0071A4;
+	background-color: #FFFFFF;
+}
+
 .wp-block-pullquote blockquote::before {
 	content: '';
 	height: 100%;
@@ -361,12 +368,13 @@ a.wp-block-button__link:focus::after {
 	transition: transform 0.3s ease-out;
 }
 
-hr {
+hr,
+hr.wp-block-separator.is-style-wide {
 	border: 0;
 	border-bottom: 10px solid #0071A4;
 	width: 100%;
 	height: 0;
-	margin: 20px 0;
+	margin: 50px 0;
 }
 
 .displayed {
@@ -543,6 +551,8 @@ header {
 	top: -10px;
 	left: 5px;
 	position: relative;
+	transform: rotate(-0.5deg);
+  transform-origin: left;
 }
 
 .nav-wrapper {
@@ -939,7 +949,10 @@ header {
 	background-color: #E5007D;
 	z-index: -1;
 }
-
+.front-page .post-wrapper.featured-post .featured-image,
+.front-page .post-wrapper.featured-post:not(:first-child) .featured-image {
+	background-color: #A4005A;
+}
 .front-page .post-wrapper.featured-post .featured-image > a:hover,
 .front-page .post-wrapper.featured-post .featured-image > a:focus,
 .front-page .post-wrapper.featured-post:not(:first-child) .featured-image > a:hover,
@@ -955,6 +968,10 @@ header {
 
 .front-page .post-wrapper .featured-image-back-rectangle {
 	background-color: #009EE3;
+	z-index: -1;
+}
+.front-page .post-wrapper .featured-image {
+	background-color: #0071A4;
 }
 
 .front-page .post-wrapper .featured-image > a:hover,
@@ -964,6 +981,9 @@ header {
 
 .front-page .post-wrapper:not(:first-child) .featured-image-back-rectangle {
 	background-color: #FFED00;
+}
+.front-page .post-wrapper:not(:first-child) .featured-image {
+	background-color: #FFFF6D;
 }
 
 .front-page .post-wrapper:not(:first-child) .featured-image > a:hover,
@@ -1088,6 +1108,10 @@ header {
 	margin: 0;
 	user-select: none;
 	z-index: 100;
+}
+
+.featured-image .image-source a {
+	color: #FFFFFF66;
 }
 
 .post-wrapper .post-shortinfo {
@@ -1479,7 +1503,7 @@ footer * {
 
 .nav-footer a {
 	font-family: var(--primary-font);
-	font-size: 1.4em;
+	font-size: 1.3em;
 	color: #FFFFFF;
 }
 
@@ -1787,6 +1811,11 @@ footer * {
 		height: 150px;
 	}
 
+	hr,
+	hr.wp-block-separator.is-style-wide {
+		margin: 30px 0;
+	}
+
 	.header-triangle-shape {
 		left: -75px;
 		width: 410px;
@@ -1849,7 +1878,7 @@ footer * {
 	.post-wrapper.featured-post .featured-image,
 	.posts-list-wrapper.search .post-wrapper .featured-image,
 	.posts-list-wrapper.search .post-wrapper:not(:first-child) .featured-image {
-		margin-bottom: 20px;
+		margin-bottom: 30px;
 	}
 
 	.category-header,

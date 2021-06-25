@@ -1,0 +1,6 @@
+- fixed transparent images
+- added abstract block
+- added category descriptions
+- added category sorting on front page
+- order change on front page ongoing
+- some more style fixes

@@ -44,17 +44,20 @@
   </div>
 
 
-  <?php foreach (get_categories() as $k => $v) { ?>
-    <?php if ($v->term_id == 1) { continue; } ?>
+  <?php
+  $cat_order = explode("\n", get_theme_mod('front_page_category_order'));
+  foreach ($cat_order as $k => $v) {
+    if (get_cat_ID($v) == null) { continue; } ?>
     <div class="category-header">
       <div class="horizontal-bar-blue"></div>
-      <h3 class="category-header-title"><a href="<?php echo get_category_link($v); ?>"><?php echo $v->name; ?></a></h3>
+      <h3 class="category-header-title"><a href="<?php echo get_category_link(get_cat_ID($v)); ?>"><?php echo $v; ?></a></h3>
     </div>
 
     <div class="posts-list-wrapper">
-    <?php foreach (get_posts(array(
+    <?php
+    foreach (get_posts(array(
         'numberposts' => 3,
-        'category' => $v->term_id,
+        'category' => get_cat_ID($v),
       )) as $key => $value) {
       	?>
         <article class="post-wrapper">

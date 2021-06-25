@@ -6,6 +6,10 @@
     <h3 class="page-title-heading"><?php single_cat_title(); ?></h3>
   </div>
 
+  <div class="page-content">
+    <p class="page-description"><?php echo category_description(); ?></p>
+  </div>
+
   <div class="posts-list-wrapper">
     <?php
     if (have_posts()) {
