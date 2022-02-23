@@ -1223,6 +1223,7 @@ header {
 
 .single-wrapper .author-image-wrapper img {
 	height: 100px;
+	max-width: inherit;
 }
 
 .single-wrapper .author-image-wrapper i {
