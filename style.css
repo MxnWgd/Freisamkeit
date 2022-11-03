@@ -3,11 +3,43 @@
   Author: Maximilian Wiegand
 	Author URI: http://maxiw.de/
   Description: A theme designed for the Freisamkeit-magazine of the Bundesverband der Liberalen Hochschulgruppen. Any other use than on the designated webpage requires prior approval by the author. For bugs or improvements refer to https://github.com/MxnWgd/Freisamkeit/issues.
-  Version: 1.2.3
+  Version: 1.2.4
 	Requires at least: 5.8
-	Tested up to: 5.8.2
+	Tested up to: 6.1
   Text Domain: freisamkeit
 */
+
+@font-face {
+	font-family: 'Catamaran';
+	src: url('fonts/Catamaran-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Catamaran';
+	src: url('fonts/Catamaran-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto Slab';
+	src: url('fonts/RobotoSlab-Regular.ttf') format('truetype');
+	font-stretch: 100%;
+	font-style: normal;
+	font-weight: normal;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: 'Roboto Slab';
+	src: url('fonts/RobotoSlab-Medium.ttf') format('truetype');
+	font-stretch: 100%;
+	font-style: normal;
+	font-weight: 500;
+	font-display: fallback;
+}
 
 /*-----------------------------------------------
   Variables
